@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Yash Raj">
+        <meta name="description" content="A form for Customer Registeration.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Customer Reg_Form</title>
+    </head>
+    <body>
+        <h1>Application for Customer Registeration</h1>
+        <form action="./confirm.html">
+            <table>
+				<tbody>
+					<tr>
+						<th align="right">User Name :</th>
+						<td><input type="text" autofocus required pattern="[a-zA-Z]+" maxlength="15"></td>
+					</tr>
+					<tr>
+						<th align="right">Password :</th>
+						<td><input type="password" required pattern="^[0-9][a-zA-Z]+[0-9]$" minlength="8" maxlength="12"></td>
+					</tr>
+					<tr>
+						<th align="right">Confirm Password :</th>
+						<td><input type="password" required pattern="^[0-9][a-zA-Z]+[0-9]$" minlength="8" maxlength="12"></td>
+					</tr>
+					<tr>
+						<th align="right">Email :</th>
+						<td><input type="email"></td>
+					</tr>
+					<tr>
+						<th align="right">Gender :</th>
+                        <td>
+                            Male<input type="radio" name="gender" required>
+                            Female<input type="radio"  name="gender" required>
+                            Other<input type="radio"  name="gender" required>
+                        </td>
+					</tr>
+					<tr>
+						<th align="right">Age :</th>
+						<td><input type="number" min="21" max="60"></td>
+					</tr>
+					<tr>
+						<th align="right">Adress :</th>
+						<td><input type="textarea" maxlength="100"></td>
+					</tr>
+					<tr>
+						<th align="right">Comapany Website :</th>
+						<td><input type="url" placeholder="https://example.com"></td>
+					</tr>
+					<tr>
+						<th align="right"><label for="lst">Country :</label></th>
+						<td><input list="country" id="lst">
+							<datalist id="country">
+								<option name="india">India</option>
+								<option name="US">United States</option>
+								<option name="germany">Germany</option>
+								<option name="japan">Japan</option>
+								<option name="france">France</option>
+								<option name="china">China</option>
+								<option name="mexico">Mexico</option>
+								<option name="iceland">Iceland</option>
+								<option name="russia">Russia</option>
+								<option name="africa">Africa</option>
+							</datalist>
+						</td>
+					</tr>
+					<tr>
+						<th align="right"></th>
+						<td><input type="submit"></td>
+					</tr>
+				</tbody>
+			</table>    
+        </form>
+    </body>
+</html>
