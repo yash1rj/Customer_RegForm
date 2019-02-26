@@ -6,72 +6,106 @@
         <meta name="description" content="A form for Customer Registeration.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<link rel="stylesheet" href="./styler.css">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
         <title>Customer Reg_Form</title>
     </head>
-    <body>
-        <h1>Application for Customer Registeration</h1>
-        <form action="./confirm.html">
-            <table>
-				<tbody>
-					<tr>
-						<th align="right">User Name :</th>
-						<td><input type="text" autofocus required pattern="[a-zA-Z]+" maxlength="15"></td>
-					</tr>
-					<tr>
-						<th align="right">Password :</th>
-						<td><input type="password" required pattern="^[0-9][a-zA-Z]+[0-9]$" minlength="8" maxlength="12"></td>
-					</tr>
-					<tr>
-						<th align="right">Confirm Password :</th>
-						<td><input type="password" required pattern="^[0-9][a-zA-Z]+[0-9]$" minlength="8" maxlength="12"></td>
-					</tr>
-					<tr>
-						<th align="right">Email :</th>
-						<td><input type="email"></td>
-					</tr>
-					<tr>
-						<th align="right">Gender :</th>
-                        <td>
-                            Male<input type="radio" name="gender" required>
-                            Female<input type="radio"  name="gender" required>
-                            Other<input type="radio"  name="gender" required>
-                        </td>
-					</tr>
-					<tr>
-						<th align="right">Age :</th>
-						<td><input type="number" min="21" max="60"></td>
-					</tr>
-					<tr>
-						<th align="right">Adress :</th>
-						<td><input type="textarea" rows="4" cols="20" maxlength="100"></td>
-					</tr>
-					<tr>
-						<th align="right">Comapany Website :</th>
-						<td><input type="url" placeholder="https://example.com"></td>
-					</tr>
-					<tr>
-						<th align="right"><label for="lst">Country :</label></th>
-						<td><input list="country" id="lst">
-							<datalist id="country">
-								<option name="india">India</option>
-								<option name="US">United States</option>
-								<option name="germany">Germany</option>
-								<option name="japan">Japan</option>
-								<option name="france">France</option>
-								<option name="china">China</option>
-								<option name="mexico">Mexico</option>
-								<option name="iceland">Iceland</option>
-								<option name="russia">Russia</option>
-								<option name="africa">Africa</option>
-							</datalist>
-						</td>
-					</tr>
-					<tr>
-						<th align="right"></th>
-						<td><input type="submit"></td>
-					</tr>
-				</tbody>
-			</table>    
-        </form>
+    <body class="container-fluid jumbotron jumbotron-fluid bg-dark text-white">
+		<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+			<h1 class="display-4 text-center">Application for Customer Registeration</h1>
+			<br /><hr class="bg-white" /><br />
+			<div class="row justify-content-center">
+				<div class="card text-white">
+					<h5 class="card-header bg-info text-white text-center">
+						<strong>Apply</strong>
+					</h5>
+					<form action="./confirm.html">
+						<table align="center" class="table text-black table-hover table-light">
+							<tbody>
+								<tr>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+								<tr>
+									<th class="text-right">User Name :</th>
+									<td><input type="text" class="form-control" autofocus required pattern="[a-zA-Z]+" maxlength="15"></td>
+								</tr>
+								<tr>
+									<th class="text-right">Password :</th>
+									<td><input type="password" class="form-control" required pattern="^[0-9][a-zA-Z]+[0-9]$" minlength="8" maxlength="12"></td>
+								</tr>
+								<tr>
+									<th class="text-right">Confirm Password :</th>
+									<td><input type="password" class="form-control" required pattern="^[0-9][a-zA-Z]+[0-9]$" minlength="8" maxlength="12"></td>
+								</tr>
+								<tr>
+									<th class="text-right">Email :</th>
+									<td><input type="email" class="form-control"></td>
+								</tr>
+								<tr>
+									<th class="text-right">Gender :</th>
+									<td>
+										<div class="custom-control custom-radio">
+											<input type="radio" name="gender" required id="inlineRadio1" value="option1" class="custom-control-input">
+											<label class="custom-control-label" for="inlineRadio1">Male</label>
+										</div>
+										<div class="custom-control custom-radio">
+											<input type="radio" name="gender" id="inlineRadio2" value="option2" class="custom-control-input">
+											<label class="custom-control-label" for="inlineRadio2">Female</label>
+										</div>
+										<div class="custom-control custom-radio">
+											<input type="radio" name="gender" id="inlineRadio3" value="option3" class="custom-control-input">
+											<label class="custom-control-label" for="inlineRadio3">Other</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th class="text-right">Age :</th>
+									<td><input type="number" class="form-control" min="21" max="60"></td>
+								</tr>
+								<tr>
+									<th class="text-right">Adress :</th>
+									<td><input type="textarea" class="form-control" rows="4" cols="20" maxlength="100"></td>
+								</tr>
+								<tr>
+									<th class="text-right">Comapany Website :</th>
+									<td><input type="url" class="form-control" placeholder="https://example.com"></td>
+								</tr>
+								<tr>
+									<th class="text-right"><label for="country">Country :</label></th>
+									<td>
+										<select class="custom-select" id="country">
+											<option name="india">India</option>
+											<option name="US">United States</option>
+											<option name="germany">Germany</option>
+											<option name="japan">Japan</option>
+											<option name="france">France</option>
+											<option name="china">China</option>
+											<option name="mexico">Mexico</option>
+											<option name="iceland">Iceland</option>
+											<option name="russia">Russia</option>
+											<option name="africa">Africa</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="card-footer bg-info text-center">
+							<input type="submit" class="btn btn-warning">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
 </html>
